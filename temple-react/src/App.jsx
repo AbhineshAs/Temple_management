@@ -25,6 +25,7 @@ import AdminEvents from "./pages/AdminEvents";
 import { auth, db } from "./firebase";
 import { getDoc, doc } from "firebase/firestore";
 
+// Admin Protected Route
 function AdminRoute({ children }) {
   const [allowed, setAllowed] = useState(null);
 
@@ -49,9 +50,11 @@ function AdminRoute({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Temple_management/temple-react/">
       <Navbar />
-      <main style={{ minHeight: "70vh" }}>
+
+      {/* Main Content Area */}
+      <div style={{ paddingTop: "90px", minHeight: "80vh" }}>
         <Routes>
 
           {/* USER ROUTES */}
@@ -66,7 +69,7 @@ export default function App() {
           {/* ADMIN LOGIN */}
           <Route path="/admin-login" element={<AdminLogin />} />
 
-          {/* ADMIN DASHBOARD */}
+          {/* ADMIN ROUTES */}
           <Route
             path="/admin/dashboard"
             element={
@@ -76,7 +79,6 @@ export default function App() {
             }
           />
 
-          {/* ADMIN PANELS */}
           <Route
             path="/admin/bookings"
             element={
@@ -105,7 +107,8 @@ export default function App() {
           />
 
         </Routes>
-      </main>
+      </div>
+
       <Footer />
     </BrowserRouter>
   );
