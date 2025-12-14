@@ -102,7 +102,7 @@ body::before {
       rgba(255, 255, 255, 0.02),
       transparent 20%
     ),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent 60%);
+    linear-gradient(180deg, rgba(243, 164, 73, 0.341), transparent 60%);
   opacity: 1;
 }
 
@@ -129,7 +129,7 @@ h5 {
   top: 18px;
   z-index: 90;
   margin: 10px;
-  background: rgba(255, 255, 255, 0.362);
+  background: rgba(255, 255, 255, 0.612);
   border-radius: 15px;
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-1);
@@ -543,7 +543,7 @@ h5 {
 }
 
 .festival-timeline {
-  border-left: 4px solid rgba(43, 122, 75, 0.12);
+  border-left: 4px solid rgba(255, 125, 11, 0.418);
   padding-left: 26px;
   margin: 20px auto;
   max-width: 780px;
@@ -561,15 +561,15 @@ h5 {
   height: 14px;
   border-radius: 50%;
   background: var(--gold);
-  box-shadow: 0 4px 14px rgba(198, 154, 72, 0.14);
+  box-shadow: 0 4px 14px rgba(198, 154, 72, 0.367);
 }
 .f-item h4 {
-  color: var(--accent-green-600);
+  color: rgb(255, 128, 0);
   font-family: var(--font-serif);
   margin: 0 0 6px 0;
 }
 .f-item p {
-  color: var(--muted);
+  color: rgba(13, 12, 12, 0.644);
   margin: 0;
 }
 
@@ -1087,11 +1087,11 @@ a:hover {
 }
 
 .map-wrapper {
-  width: 25%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.078);
   margin-top: 12px;
 }
 

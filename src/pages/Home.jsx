@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../style.css";
 
 // Assets
-import heroVideo from "../assets/home.mp4";
+import heroVideo from "../assets/background1.mp4";
 import img2 from "../assets/goddess1.jpg";
 import img3 from "../assets/goddess2.jpg";
 
@@ -40,17 +40,16 @@ export default function Home() {
     },
     {
       name: "ക്ഷേത്ര മേൽശാന്തി ",
-      experience: "ശ്രീ. ഹരികൃഷ്ണൻ പൊറ്റി",
-      
+      experience: "ശ്രീ. ഹരികൃഷ്ണൻ നമ്പൂതിരി",
     },
     {
       name: "രക്ഷാദികാരി ",
       experience: "ശ്രീ.  ജി. സുഗതൻ ",
-      desc : "ശ്രീ. ആർ. ശ്രീധരൻ ",
-     
     },
-    
-
+    {
+      name: "രക്ഷാദികാരി ",
+      experience: "ശ്രീ. ആർ. ശ്രീധരൻ ",
+    },
   ];
 
   // Testimonials
@@ -158,14 +157,14 @@ export default function Home() {
             <h3 className="section-title">Popular Poojas & Services</h3>
 
             <div className="services-grid">
-              <div className="service-card">Bhagavathi Seva</div>
-              <div className="service-card">Kalasha Pooja</div>
-              <div className="service-card">Ayillya Pooja</div>
-              <div className="service-card">Ganapathi Homam</div>
-              <div className="service-card">Mrithunjaya Homam</div>
-              <div className="service-card">Nagaroott</div>
-              <div className="service-card">Jaladhara</div>
-              <div className="service-card">Valiya Pudukka</div>
+              <div className="service-card">ഭഗവതി സേവ</div>
+              <div className="service-card">കലശപൂജ</div>
+              <div className="service-card">അയില്യപൂജ</div>
+              <div className="service-card">ഗണപതി ഹോമം</div>
+              <div className="service-card">മൃത്യുഞ്ജയ ഹോമം</div>
+              <div className="service-card">നാഗാരൂട്ട്</div>
+              <div className="service-card">ജലധാര</div>
+              <div className="service-card">വലിയ പുടുക്ക</div>
             </div>
           </section>
 

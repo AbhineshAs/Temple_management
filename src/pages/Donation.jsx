@@ -48,7 +48,7 @@ export default function Donation() {
 ⚠️ *Please attach your payment screenshot for verification.*
     `.trim();
 
-    const whatsappURL = `https://wa.me/919061218582?text=${encodeURIComponent(msg)}`;
+    const whatsappURL = `https://wa.me/919746269438?text=${encodeURIComponent(msg)}`;
     window.open(whatsappURL, "_blank");
   };
 

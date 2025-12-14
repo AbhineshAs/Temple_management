@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="nav-logo">
           <span className="logo-icon">🕉</span>
           <div>
-            <div className="logo-main">കാവിൽ ഭഗവതി</div><br></br>
+            <div className="logo-main"><b>കാവിൽ ഭഗവതി</b></div><br></br>
             
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function Navbar() {
         <Link to="/events" onClick={() => setOpen(false)}>Events</Link>
         <Link to="/admin-login" onClick={() => setOpen(false)}>Admin</Link>
 
-        <a href="tel:+919061218582" className="mobile-btn-call">📞 Call</a>
+        <a href="tel:+919746269438" className="mobile-btn-call">📞 Call</a>
         <Link to="/book-pooja" className="mobile-btn-book">Book Now</Link>
       </div>
 
