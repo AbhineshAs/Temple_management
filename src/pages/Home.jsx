@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -13,7 +12,7 @@ import img3 from "../assets/goddess2.jpg";
 import BackgroundLayers from "../components/BackgroundLayers";
 import FestivalTimeline from "../components/FestivalTimeline";
 import PriestCard from "../components/PriestCard";
-import Testimonials from "../components/Testimonials";
+
 
 export default function Home() {
   // Scroll animation
@@ -52,22 +51,7 @@ export default function Home() {
     },
   ];
 
-  // Testimonials
-  const testimonials = [
-    { who: "Sajith", text: "Calm, traditional and spiritual atmosphere." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Satheesh Kumar", text: "Beautiful place, well maintained." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-    { who: "Renjith", text: "Blessings for health, wealth & protection." },
-  ];
+
 
   // Temple Timing (NEW SECTION)
   const templeTiming = [
@@ -202,11 +186,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* TESTIMONIALS */}
-      <section style={{ marginTop: 20 }} data-ani="zoom">
-        <h3 className="section-title">Testimonials</h3>
-        <Testimonials items={testimonials} />
-      </section>
+    
       {/* TEMPLE MAP SECTION */}
       <section className="map-section" data-ani="zoom">
         <h3 className="section-title">Temple Location</h3>

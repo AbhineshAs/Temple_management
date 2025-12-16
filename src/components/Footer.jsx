@@ -21,7 +21,7 @@ export default function Footer() {
           <p className="footer-sub">A centre of devotion and community</p>
 
           <div className="footer-social">
-            <a href="https://www.facebook.com/groups/pangodesreekavilbhagavathy/"><FaFacebook /></a>
+            <a href="https://www.facebook.com/profile.php?id=100089637351679"><FaFacebook /></a>
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaYoutube /></a>
           </div>
@@ -33,9 +33,9 @@ export default function Footer() {
           <ul className="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Temple</a></li>
-            <li><a href="/festival">Festivals</a></li>
+            <li><a href="/events">Festivals</a></li>
             <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+          
           </ul>
         </div>
 

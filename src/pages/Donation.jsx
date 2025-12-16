@@ -18,9 +18,9 @@ export default function Donation() {
 
     const upiId = "110527913001199@cnrb";
 
-    const upi = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(
-      name
-    )}&am=${amount}&cu=INR`;
+    const upi = `upi://pay?pa=${encodeURIComponent(
+      upiId
+    )}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
 
     setQr(upi);
 
@@ -48,13 +48,14 @@ export default function Donation() {
 ⚠️ *Please attach your payment screenshot for verification.*
     `.trim();
 
-    const whatsappURL = `https://wa.me/919746269438?text=${encodeURIComponent(msg)}`;
+    const whatsappURL = `https://wa.me/919746269438?text=${encodeURIComponent(
+      msg
+    )}`;
     window.open(whatsappURL, "_blank");
   };
 
   return (
     <div className="page" style={{ maxWidth: 720, margin: "auto" }}>
-      
       <h2 style={{ textAlign: "center", marginBottom: 20 }}>Temple Donation</h2>
 
       {/* Donation Form */}
@@ -146,7 +147,8 @@ export default function Donation() {
             <h3>Important Notice</h3>
             <p>
               After completing the payment, please take a screenshot and send it
-              to our WhatsApp number for confirmation.
+              to our WhatsApp number for verification. The receipt will be sent
+              to your WhatsApp after confirmation.
             </p>
 
             <button className="modal-btn" onClick={() => setShowModal(false)}>

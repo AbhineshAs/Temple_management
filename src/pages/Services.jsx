@@ -21,14 +21,14 @@ export default function Services() {
            
 
             <div className="services-grid">
-              <div className="service-card">Bhagavathi Seva</div>
-              <div className="service-card">Kalasha Pooja</div>
-              <div className="service-card">Ayillya Pooja</div>
-              <div className="service-card">Ganapathi Homam</div>
-              <div className="service-card">Mrithunjaya Homam</div>
-              <div className="service-card">Nagaroott</div>
-              <div className="service-card">Jaladhara</div>
-              <div className="service-card">Valiya Pudukka</div>
+             <div className="service-card">ഭഗവതി സേവ</div>
+              <div className="service-card">കലശപൂജ</div>
+              <div className="service-card">അയില്യപൂജ</div>
+              <div className="service-card">ഗണപതി ഹോമം</div>
+              <div className="service-card">മൃത്യുഞ്ജയ ഹോമം</div>
+              <div className="service-card">നാഗാരൂട്ട്</div>
+              <div className="service-card">ജലധാര</div>
+              <div className="service-card">വലിയ പുടുക്ക</div>
             </div>
           </section>
         </div>

@@ -6,6 +6,35 @@ import { db } from "../firebase";
 // ------------------------------------------------------------
 //  FULL TEMPLE POOJA LIST (Grouped)
 // ------------------------------------------------------------
+const NAKSHATRAS = [
+  "അശ്വതി",
+  "ഭരണി",
+  "കാർത്തിക",
+  "രോഹിണി",
+  "മകയിരം",
+  "തിരുവാതിര",
+  "പുണർതം",
+  "പൂയം",
+  "ആയില്ല്യം",
+  "മകം",
+  "പൂരം",
+  "ഉത്രം",
+  "അത്തം",
+  "ചിത്തിര",
+  "ചോതി",
+  "വിശാഖം",
+  "അനിഴം",
+  "തൃക്കേട്ട",
+  "മൂലം",
+  "പൂരാടം",
+  "ഉത്രാടം",
+  "തിരുവോണം",
+  "അവിട്ടം",
+  "ചതയം",
+  "പൂരുരുട്ടാതി",
+  "ഉത്രട്ടാതി",
+  "രേവതി",
+];
 const poojaGroups = {
   "Sree Bhadraa Devi": [
     { name: "Janmanakshathra Archana (ജൻമ നക്ഷത്രാർച്ചന)", price: 151 },
@@ -94,10 +123,16 @@ const poojaGroups = {
     { name: "Navakalasham", price: 5000 },
     { name: "Ashtadravya Kalasham", price: 5000 },
     { name: "Kalabhishekam", price: 6000 },
+    { name: "NIRAPARA", price: 101 },
     { name: "One Day Pooja", price: 5000 },
     { name: "Kalyana Kuri", price: 101 },
     { name: "Single Kalasham", price: 500 },
     { name: "Devi Mahatmya Parayanam", price: 2000 },
+  ],
+  Elankam: [
+    { name: "Thatta pooja ", price: 0 },
+    { name: "Bhasama ideel", price: 0 },
+    { name: "Padukka pooja ", price: 0 },
   ],
 };
 
@@ -306,7 +341,9 @@ export default function PoojaBooking() {
         }
       `}</style>
 
-      <h2 style={{ textAlign: "center", marginBottom: 20 }}>Book a Pooja Online</h2>
+      <h2 style={{ textAlign: "center", marginBottom: 20 }}>
+        Book a Pooja Online
+      </h2>
 
       {/* FORM */}
       <form
@@ -322,8 +359,16 @@ export default function PoojaBooking() {
         <label>Full Name</label>
         <input name="name" required placeholder="Enter Full Name" />
 
+        {/* ✅ ONLY CORRECTION HERE */}
         <label style={{ marginTop: 10 }}>Nakshatra</label>
-        <input name="nakshatra" required placeholder="Nakshatra" />
+        <select name="nakshatra" required>
+          <option value="">Select Category</option>
+          {NAKSHATRAS.map((n) => (
+            <option key={n} value={n}>
+              {n}
+            </option>
+          ))}
+        </select>
 
         {/* CATEGORY */}
         <label style={{ marginTop: 10 }}>Select Category</label>
@@ -347,7 +392,9 @@ export default function PoojaBooking() {
           required
           onChange={(e) => {
             const cat = e.target.form.category.value;
-            const pooja = poojaGroups[cat]?.find((p) => p.name === e.target.value);
+            const pooja = poojaGroups[cat]?.find(
+              (p) => p.name === e.target.value
+            );
             setSelectedPooja(pooja);
           }}
         >
@@ -392,7 +439,9 @@ export default function PoojaBooking() {
 
       {/* ERROR */}
       {error && (
-        <p style={{ color: "red", textAlign: "center", marginTop: 12 }}>{error}</p>
+        <p style={{ color: "red", textAlign: "center", marginTop: 12 }}>
+          {error}
+        </p>
       )}
 
       {/* QR SECTION */}
@@ -414,9 +463,15 @@ export default function PoojaBooking() {
             </div>
 
             <div style={{ textAlign: "left" }}>
-              <p><b>Name:</b> {bookingData.name}</p>
-              <p><b>Pooja:</b> {bookingData.poojaType}</p>
-              <p><b>Amount:</b> ₹{bookingData.amount}</p>
+              <p>
+                <b>Name:</b> {bookingData.name}
+              </p>
+              <p>
+                <b>Pooja:</b> {bookingData.poojaType}
+              </p>
+              <p>
+                <b>Amount:</b> ₹{bookingData.amount}
+              </p>
 
               <button
                 className="btn primary"
@@ -430,6 +485,8 @@ export default function PoojaBooking() {
           </div>
         </div>
       )}
+
+     
 
       {/* IMPORTANT NOTES BOX */}
       <div
@@ -450,15 +507,15 @@ export default function PoojaBooking() {
         {`
 വിശേഷ പൂജകൾ  
 
-• ഓരോ മാസവും വെള്ളിവള്ളി (പൗർണ്ണമി) ദിനത്തിൽ ഐശ്വര്യ പൂജയും ഭഗവതി സേവയും നടത്തപ്പെടുന്നു.
+• എല്ലാ മാസവും വെളുത്തവാവ് (പൗർണമി) ദിവസങ്ങളിൽ ഐശ്വര്യപൂജയും ഭഗവതി സേവയും നടത്തിവരുന്നു..
 
-• തിരുവാതിര നാളിൽ മഹാദേവനു കൂട്ട് മൃദുഞ്ജയ ഹോമം നടത്തപ്പെടുന്നു.
+• തിരുവാതിര നാളിൽ മഹാദേവന് പ്രത്യേക മൃത്യുഞ്ജയ ഹോമം നടത്തപ്പെടുന്നു
 
-• മകം നാളിൽ കലശ പൂജയും, ആയില നാളിൽ പ്രത്യേക ആയില പൂജയും നൂറുംപാലും നടത്തപ്പെടുന്നു.
+• മകം നാളിൽ കലശപൂജയും, ആയില്ല്യം നാളിൽ പ്രത്യേക ആയില്ല്യപൂജയും നൂറും പാലും നടത്തിവരുന്നു.
 
-• മലയാള മാസം ഒന്നാം തീയതി ഗണപതി ഭഗവാനു കൂട്ട് ഗണപതി ഹോമം നടത്തപ്പെടുന്നു.
+• മലയാള മാസത്തിലെ ഒന്നാം തീയതി ഗണപതി ഭഗവാനു പ്രത്യേക ഗണപതി ഹോമം നടത്തപ്പെടുന്നു.
 
-• മലയാള മാസത്തിലെ അവസാന വ്യാഴാഴ്ച സഹസ്രനാമാർച്ചന നടത്തപ്പെടുന്നു.
+• മലയാള മാസത്തിലെ അവസാന വെള്ളിയാഴ്ച സഹസ്രനാമാർച്ചന നടത്തിവരുന്നു.
         `}
       </div>
 
@@ -469,9 +526,14 @@ export default function PoojaBooking() {
             <div className="pb-warning-icon">⚠️</div>
             <h3>Important Notice</h3>
             <p style={{ marginTop: 8 }}>
-              Please send the payment screenshot on WhatsApp after making the payment.
+              After completing the payment, please take a screenshot and send it
+              to our WhatsApp number for verification. The receipt will be sent
+              to your WhatsApp after confirmation.
             </p>
-            <button className="pb-modal-btn" onClick={() => setShowModal(false)}>
+            <button
+              className="pb-modal-btn"
+              onClick={() => setShowModal(false)}
+            >
               OK, I Understand
             </button>
           </div>

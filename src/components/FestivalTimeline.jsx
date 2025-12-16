@@ -3,9 +3,8 @@ import React from "react";
 
 export default function FestivalTimeline() {
   const festivals = [
-    { date: "2025-12-24", title: "Navaratri Celebrations", desc: "Nine days of devotional events & homams." },
-    { date: "2026-01-14", title: "Makara Vilakku", desc: "Special bhajans and abhishekams." },
-    { date: "2026-02-15", title: "Kumbhabhishekam", desc: "Temple anniversary & consecration rites." }
+    { date: "2026-03-26 to 2026-03-29 ", title: "കൊട മഹോത്സവം 2026 ", desc: "മാർച്ച്‌ 26 മുതൽ 29 വരെ" },
+    
   ];
 
   return (
